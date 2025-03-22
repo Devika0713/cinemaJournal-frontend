@@ -1,13 +1,122 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+*{
+    font-family: "Syne",sans-serif;
+        font-weight: 500;
+        font-style: normal;
+    
+    }
+
+.diff-font   {
+    
+            font-family: "Cormorant Garamond", serif;
+            font-weight: bold;
+            font-style: italic;
+} 
+
+html {
+    min-height: 100%;
+    position: relative;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.navbar {
+    padding: 2rem 5rem;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+    background-color: #013D5A;
+    font-weight: 400;
+    
+}
+ .nav-item .nav-link, .navbar-brand {
+    color: #FCF3E3 !important;
+    text-decoration: none;
+
+}
+.nav-link a:hover {
+    color: #BDD3CE !important;
+    text-decoration: none;
+}
+
+.post-body {
+    white-space: pre-wrap;
+}
+
+.footer-padding {
+    padding-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #013D5A;
+}
+
+.footer p {
+    margin-top: 25px;
+    /* font-size: 20px; */
+    /* letter-spacing: 5px; */
+    color: #FCF3E3;
+    /* font-weight: 400; */
+}
+
+#compose-form, .card
+{
+    background-color:#FCF3E3;
+    color:#013D5A ;
+    padding: 2% 8%;
+}
+.submit-button, .btn{
+    background-color: #013D5A;
+    color: #FCF3E3;
+}
+
+.page-style
+{
+    background-color: rgb(251, 249, 246);
+    color: #013D5A;
+    padding: 5%;
+}
+/* .card-img-top
+{
+    width: 10rem;
+    height: 10rem;
+} */
+/* .container {
+    /* display: flex;
+    flex-direction: row;
+    gap: 1rem; */
+    
+   
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    gap: 3rem 5rem;
+    align-content: center;
+    justify-content: center; */
+   
+/* }  */
+
+.coverpic {
+height: inherit;
+width: inherit
+}
+.addNewBtn{
+    display: block;
+    margin: 3% auto;
+    text-align: center;
+}
+.subHeading
+{
+    text-align: center;
+    font-weight: 700;
+    padding: 10px;
 }
