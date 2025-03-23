@@ -14,7 +14,7 @@ export const PostProvider = ({ children }) => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const res = await axios.get("/movies");
+        const res = await axios.get(`${process.env.BACKEND_URI}/api/movies`);
         setPosts(res.data);
       } catch (err) {
         console.error("Error fetching movies:", err);
@@ -23,7 +23,7 @@ export const PostProvider = ({ children }) => {
 
     const fetchPostsTV = async () => {
       try {
-        const res = await axios.get("/shows");
+        const res = await axios.get(`${process.env.BACKEND_URI}/api/shows`);
         setPostsTV(res.data);
       } catch (err) {
         console.error("Error fetching shows:", err);
@@ -37,7 +37,10 @@ export const PostProvider = ({ children }) => {
   // Function to add a new post
   const addPost = async (newPost) => {
     try {
-      const res = await axios.post("/movies", newPost);
+      const res = await axios.post(
+        `${process.env.BACKEND_URI}/api/movies`,
+        newPost
+      );
       setPosts((prevPosts) => [...prevPosts, res.data]);
     } catch (err) {
       console.error("Error adding movie:", err);
@@ -47,7 +50,10 @@ export const PostProvider = ({ children }) => {
   // Function to add a new TV show post
   const addPostTV = async (newPostTV) => {
     try {
-      const res = await axios.post("/shows", newPostTV);
+      const res = await axios.post(
+        `${process.env.BACKEND_URI}/api/shows`,
+        newPostTV
+      );
       setPostsTV((prevPostsTV) => [...prevPostsTV, res.data]);
     } catch (err) {
       console.error("Error adding show:", err);
