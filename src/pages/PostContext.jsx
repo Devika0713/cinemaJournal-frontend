@@ -15,9 +15,7 @@ export const PostProvider = ({ children }) => {
     const fetchPosts = async () => {
       try {
         //const res = await axios.get(`${process.env.BACKEND_URI}/api/movies`);
-        const res = await axios.get(
-          "https://cinemajournal-backend.onrender.com/api/movies"
-        );
+        const res = await axios.get(`${process.env.BACKEND_URI}/api/movies`);
         setPosts(res.data);
       } catch (err) {
         console.error("Error fetching movies:", err);
@@ -46,7 +44,7 @@ export const PostProvider = ({ children }) => {
         newPost
       );
       // const res = await axios.post("http://localhost:5000/api/movies", newPost);
-      // setPosts((prevPosts) => [...prevPosts, res.data]);
+      setPosts((prevPosts) => [...prevPosts, res.data]);
     } catch (err) {
       console.error("Error adding movie:", err);
     }
