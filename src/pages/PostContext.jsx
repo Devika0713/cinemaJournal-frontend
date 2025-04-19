@@ -9,8 +9,7 @@ export const PostProvider = ({ children }) => {
 
   // For TV shows
   const [postsTV, setPostsTV] = useState([]);
-  console.log("posts", typeof posts);
-  console.log("postsTV", typeof postsTV);
+
   // Fetch posts from the database when the component mounts
   useEffect(() => {
     const fetchPosts = async () => {
@@ -36,7 +35,8 @@ export const PostProvider = ({ children }) => {
     fetchPosts();
     fetchPostsTV();
   }, []);
-
+  console.log("posts", typeof posts, posts);
+  console.log("postsTV", typeof postsTV, postsTV);
   // Function to add a new post
   const addPost = async (newPost) => {
     try {
