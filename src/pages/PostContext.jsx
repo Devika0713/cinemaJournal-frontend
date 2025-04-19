@@ -14,8 +14,10 @@ export const PostProvider = ({ children }) => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const res = await axios.get(`${process.env.BACKEND_URI}/api/movies`);
-        // const res = await axios.get("http://localhost:5000/api/movies");
+        //const res = await axios.get(`${process.env.BACKEND_URI}/api/movies`);
+        const res = await axios.get(
+          "https://cinemajournal-backend.onrender.com/api/movies"
+        );
         setPosts(res.data);
       } catch (err) {
         console.error("Error fetching movies:", err);
