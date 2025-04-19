@@ -78,7 +78,7 @@ function StatsMovie() {
             <h5 class="card-title">{post.title}</h5>
             <small class="text-body-secondary">
               {responseData["release_date"]}
-              Language:{post.lang}
+              Language:{post.lang || "Not specified"}
             </small>
             <p class="card-text">{responseData["overview"]}</p>
             {/* <p class="card-text">

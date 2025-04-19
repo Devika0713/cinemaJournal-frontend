@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 // Recreate this by adding the discover button and each post should open up a new page(stats page) which calls the api and displays the details
 
-function PostCard({ title, genre, date, rating, index, type }) {
+function PostCard({ title, genre, date, rating, index, type, language }) {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -57,6 +57,7 @@ function PostCard({ title, genre, date, rating, index, type }) {
           <p className="card-text">
             Date finished: {date}
             <br></br>Genre: {genre}
+            <br></br>Language: {language}
             <br></br>
             <StarRating rating={rating} />
           </p>

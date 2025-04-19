@@ -28,8 +28,6 @@ function Home() {
               const [year, month, day] = dateString.split("-");
               return `${day}/${month}/${year.slice(2)}`;
             };
-
-            // Example usage
             const formattedDate = convertDateFormat(movie.date);
             return (
               <PostCard
@@ -39,6 +37,7 @@ function Home() {
                 date={formattedDate}
                 genre={movie.genre}
                 rating={movie.rating}
+                language={movie.language || "Not specified"}
                 type="movie"
               />
             );
@@ -77,6 +76,7 @@ function Home() {
                 date={formattedDate}
                 genre={show.genre}
                 rating={show.rating}
+                language={show.language || "Not specified"}
                 type="tv"
               />
             );
