@@ -21,8 +21,7 @@ function StatsMovie() {
         method: "GET",
         headers: {
           accept: "application/json",
-          Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3NWEyNzlhMGMyMDU4ZWZiY2JhNjQ1ZGE2ZDhkNDE1MyIsIm5iZiI6MTcyNzc5MjM0Ny40ODU2NzksInN1YiI6IjY2ZmMwMmMyNDk1NWI0YTIwNmYxODU3ZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ZoldbpdENtYDVmSvUu_6dFsufXLKNpzWZn8L70MRaBc",
+          Authorization: process.env.API_KEY,
         },
       };
       try {
@@ -32,7 +31,7 @@ function StatsMovie() {
         setResponseData(result.results[0]);
         // set the response data to state
       } catch (error) {
-        console.error(error);
+        console.error("Error fetching data:", error);
         setResponseData("Error fetching data");
       }
     };
