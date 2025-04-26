@@ -39,7 +39,7 @@ export const PostProvider = ({ children }) => {
     fetchPosts();
     fetchPostsTV();
   }, []);
-  console.log("posts", typeof posts, posts);
+  console.log("posts from new folder", typeof posts, posts);
   console.log("postsTV", typeof postsTV, postsTV);
   // Function to add a new post
   const addPost = async (newPost) => {
