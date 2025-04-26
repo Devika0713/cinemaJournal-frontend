@@ -20,8 +20,7 @@ function StatsTV() {
         method: "GET",
         headers: {
           accept: "application/json",
-          Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3NWEyNzlhMGMyMDU4ZWZiY2JhNjQ1ZGE2ZDhkNDE1MyIsIm5iZiI6MTczMDAzOTI2MC45NDcyMTEsInN1YiI6IjY2ZmMwMmMyNDk1NWI0YTIwNmYxODU3ZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.3EPrEDJUaDW8JiUP8vPEFhMHZcvndKuDENmsy3KPbao",
+          Authorization: process.env.API_KEY_TV,
         },
       };
       try {

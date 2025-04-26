@@ -15,7 +15,9 @@ export const PostProvider = ({ children }) => {
     const fetchPosts = async () => {
       try {
         //const res = await axios.get(`${process.env.BACKEND_URI}/api/movies`);
-        const res = await axios.get(`${process.env.BACKEND_URI}/api/movies`);
+        const res = await axios.get(
+          `${process.env.REACT_APP_BACKEND_URI}/api/movies`
+        );
         setPosts(res.data);
       } catch (err) {
         console.error("Error fetching movies:", err);
@@ -24,7 +26,9 @@ export const PostProvider = ({ children }) => {
 
     const fetchPostsTV = async () => {
       try {
-        const res = await axios.get(`${process.env.BACKEND_URI}/api/shows`);
+        const res = await axios.get(
+          `${process.env.REACT_APP_BACKEND_URI}/api/shows`
+        );
         // const res = await axios.get("http://localhost:5000/api/shows");
         setPostsTV(res.data);
       } catch (err) {
