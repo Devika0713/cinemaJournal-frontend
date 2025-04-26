@@ -14,3 +14,10 @@ Add a carousal to display the shows and movies on the home page
 Fixed language issue
 no need of carousal - decided to display only newest four entries and added a view more button to go to the respective pages
 deploying to vercel
+
+26/03
+Deployed to vercel
+The posts were not showing up but it is now fixed by mentioning the right backend and frontend urls
+TO DO:
+Not able to publish posts
+Not able to display the statistics from tmbd api (instead of location try using the id to go to new page)
