@@ -20,7 +20,8 @@ function StatsMovie() {
         method: "GET",
         headers: {
           accept: "application/json",
-          Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
+          Authorization:
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3NWEyNzlhMGMyMDU4ZWZiY2JhNjQ1ZGE2ZDhkNDE1MyIsIm5iZiI6MTcyNzc5MTgxMC4zMjQsInN1YiI6IjY2ZmMwMmMyNDk1NWI0YTIwNmYxODU3ZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.m3efkvcKx1KlpQDoTtlS3G4EpUPHFFz4G6jh47dXV_o",
         },
       };
       try {
