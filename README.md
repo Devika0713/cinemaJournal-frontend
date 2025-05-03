@@ -15,7 +15,7 @@ Fixed language issue
 no need of carousal - decided to display only newest four entries and added a view more button to go to the respective pages
 deploying to vercel
 
-26/03
+26/04
 Deployed to vercel
 The posts were not showing up but it is now fixed by mentioning the right backend and frontend urls
 TO DO:

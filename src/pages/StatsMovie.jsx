@@ -15,13 +15,12 @@ function StatsMovie() {
     const fetchData = async () => {
       const url = `https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(
         post.title
-      )}
       )}`;
       const options = {
         method: "GET",
         headers: {
           accept: "application/json",
-          Authorization: process.env.API_KEY,
+          Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
         },
       };
       try {
