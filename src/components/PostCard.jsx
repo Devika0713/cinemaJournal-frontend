@@ -9,7 +9,7 @@ function PostCard({ title, genre, date, rating, index, type, language }) {
 
   // Determine the type based on the URL path
   const determinedType =
-    type || location.pathname.includes("/movies") ? "movie" : "tv";
+    type || (location.pathname.includes("/movies") ? "movie" : "tv");
 
   const StarRating = ({ rating }) => {
     const stars = [];
