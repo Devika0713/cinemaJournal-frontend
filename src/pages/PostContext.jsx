@@ -45,7 +45,7 @@ export const PostProvider = ({ children }) => {
   const addPost = async (newPost) => {
     try {
       const res = await axios.post(
-        `${process.env.BACKEND_URI}/api/movies`,
+        `${process.env.REACT_APP_BACKEND_URI}/api/movies`,
         newPost
       );
       // const res = await axios.post("http://localhost:5000/api/movies", newPost);
@@ -59,7 +59,7 @@ export const PostProvider = ({ children }) => {
   const addPostTV = async (newPostTV) => {
     try {
       const res = await axios.post(
-        `${process.env.BACKEND_URI}/api/shows`,
+        `${process.env.REACT_APP_BACKEND_URI}/api/shows`,
         newPostTV
       );
       // const res = await axios.post(

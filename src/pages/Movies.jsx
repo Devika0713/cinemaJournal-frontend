@@ -52,7 +52,7 @@ function Movies() {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Add a new movie</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form
@@ -86,6 +86,7 @@ function Movies() {
                 date={formattedDate}
                 genre={post.genre}
                 rating={post.rating}
+                language={post.lang}
               />
             );
           })}

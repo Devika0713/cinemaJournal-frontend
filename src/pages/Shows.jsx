@@ -50,7 +50,7 @@ function Shows() {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Add a new show</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form
@@ -85,6 +85,7 @@ function Shows() {
                 date={formattedDate}
                 genre={post.genre}
                 rating={post.rating}
+                language={post.lang}
               />
             );
           })}
